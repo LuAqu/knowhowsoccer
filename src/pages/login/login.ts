@@ -26,6 +26,7 @@ export class LoginPage {
   loginForm: FormGroup;
   loginError: string;
   credentials: usercreds;
+  
   constructor(private navCtrl: NavController,
     private auth: AuthService,
     fb: FormBuilder
@@ -49,7 +50,7 @@ export class LoginPage {
     };
     this.auth.signInWithEmail(credentials)
     .then(
-      () => this.navCtrl.setRoot(AvatarPage),
+      () => this.navCtrl.setRoot(AccountdetailsPage),
       error => this.loginError = error.message
     );
   }

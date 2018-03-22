@@ -1,20 +1,16 @@
-<ion-header>
-  <ion-navbar color="hcolor">
-    <ion-title>Profile Picture</ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content>
+  <!-- <ion-img alt="logo" height="56" width="66" src="../assets/img/khs.png" class="img-logo"></ion-img> -->
+
   <div class="profile-image">
     <img src="{{imgurl}}">
   </div>
   <div>
-    <button ion-button round outline (click)="chooseimage()">Choose an image</button>
+    <button ion-button round color="teal" outline (click)="chooseimage()">Choose an image</button>
   </div>
   <div [hidden]="!moveon">
-    <button ion-button round outline (click)="proceed()">Skip this step</button>
+    <button ion-button round color="teal" outline (click)="proceed()">Skip this step</button>
   </div>
   <div [hidden]="moveon">
-    <button ion-button round outline (click)="updateproceed()">Upload & proceed</button>
+    <button ion-button round color="teal" outline (click)="updateproceed()">Upload & proceed</button>
   </div>
 </ion-content>

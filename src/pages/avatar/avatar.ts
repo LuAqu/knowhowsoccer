@@ -15,7 +15,7 @@ import { LoginPage } from '../login/login';
   templateUrl: 'avatar.html',
 })
 export class AvatarPage {
-  imgurl = 'https://firebasestorage.googleapis.com/v0/b/myapp-4eadd.appspot.com/o/chatterplace.png?alt=media&token=e51fa887-bfc6-48ff-87c6-e2c61976534e';
+  imgurl = 'https://firebasestorage.googleapis.com/v0/b/knowhowsoccer-c1a2d.appspot.com/o/avatar.jpg?alt=media&token=a73ef23c-33e2-4b1f-aba8-beb67c9fc10b';
   moveon = true;
   constructor(public navCtrl: NavController, public navParams: NavParams, public avatarservice: AvatarhandlerProvider,
     public zone: NgZone, public userservice: UserProvider, public loadingCtrl: LoadingController) {

@@ -1,47 +1,70 @@
 <ion-content>
-	<img alt="logo" height="50" src="../assets/img/khs.png" class="img-logo">
-	<form (ngSubmit)="trainingdetails()" [formGroup]="form">
+	<ion-img alt="logo" height="56" width="66" src="../assets/img/khs.png" class="img-logo"></ion-img>
+	<form (ngSubmit)="schedule()" [formGroup]="form">
+		<!-- <ion-list inset>
+
+	<ion-list-header>
+    Season
+  </ion-list-header>
+
+			<ion-item>
+        <ion-label>When does your season start?</ion-label>
+        <ion-datetime displayFormat="DD MMM, YYYY"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>When does your season end?</ion-label>
+        <ion-datetime displayFormat="DD MMM, YYYY"></ion-datetime>
+      </ion-item>
+
+		</ion-list> -->
 		<ion-list inset>
 
-	<ion-item>
-    <ion-label>Monday</ion-label>
-    <ion-checkbox></ion-checkbox>
-  </ion-item>
+			<ion-list-header>
+		    What are your days and times of training?
+		  </ion-list-header>
 
-  <ion-item>
-    <ion-label>Tuesday</ion-label>
-    <ion-checkbox></ion-checkbox>
-  </ion-item>
+			<ion-item>
+				<ion-label>Monday</ion-label>
+				<ion-datetime displayFormat="HH:mm"></ion-datetime>
+			</ion-item>
 
-  <ion-item>
-    <ion-label>Wednesday</ion-label>
-    <ion-checkbox></ion-checkbox>
-  </ion-item>
+			<ion-item>
+				<ion-label>Tuesday</ion-label>
+				<ion-datetime displayFormat="HH:mm"></ion-datetime>
+			</ion-item>
 
-	<ion-item>
-    <ion-label>Thursday</ion-label>
-    <ion-checkbox></ion-checkbox>
-  </ion-item>
+		<ion-item>
+			<ion-label>Wednesday</ion-label>
+			<ion-datetime displayFormat="HH:mm"></ion-datetime>
+		</ion-item>
 
-  <ion-item>
-    <ion-label>Friday</ion-label>
-    <ion-checkbox></ion-checkbox>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Saturday</ion-label>
-    <ion-checkbox></ion-checkbox>
-  </ion-item>
+		<ion-item>
+			<ion-label>Thursday</ion-label>
+			<ion-datetime displayFormat="HH:mm"></ion-datetime>
+		</ion-item>
 
 	<ion-item>
-    <ion-label>Sunday</ion-label>
-    <ion-checkbox></ion-checkbox>
-  </ion-item>
+		<ion-label>Friday</ion-label>
+		<ion-datetime displayFormat="HH:mm"></ion-datetime>
+	</ion-item>
 
-		</ion-list>
+	<ion-item>
+		<ion-label>Saturday</ion-label>
+		<ion-datetime displayFormat="HH:mm"></ion-datetime>
+	</ion-item>
+
+<ion-item>
+	<ion-label>Sunday</ion-label>
+	<ion-datetime displayFormat="HH:mm"></ion-datetime>
+</ion-item>
+
+	</ion-list>
 
 		<div padding-horizontal>
 			<div class="form-error">{{signupError}}</div>
+
+			<div class="spacer"></div>
 
 			<button ion-button full color="teal" type="submit" [disabled]="!form.valid">Next</button>
 		</div>

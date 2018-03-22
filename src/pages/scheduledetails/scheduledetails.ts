@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AuthService } from '../../services/auth.service';
+import { AvatarPage } from '../avatar/avatar';
 
 /**
  * Generated class for the ScheduledetailsPage page.
@@ -30,7 +31,7 @@ export class ScheduledetailsPage {
     }
 
   schedule() {
-      this.navCtrl.setRoot(ScheduledetailsPage);
+      this.navCtrl.setRoot(AvatarPage);
   }
 
   ionViewDidLoad() {
