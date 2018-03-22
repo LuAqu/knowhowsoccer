@@ -1,0 +1,42 @@
+<ion-content>
+	<img alt="logo" height="50" src="../assets/img/khs.png" class="img-logo">
+	<img alt="logo" height="280" src="../assets/img/BubbleAccount.png" class="img-bubble">
+	<form (ngSubmit)="trainingdetails()" [formGroup]="form">
+		<ion-list inset>
+
+			<ion-item>
+        <ion-label floating>What is the name of your club/team?</ion-label>
+				<ion-input type="text" formControlName="name"></ion-input>
+			</ion-item>
+
+			<div ngxErrors="name" #emailErrors="ngxErrors">
+				<div [ngxError]="['name', 'required']" [when]="['touched']">This field is required</div>
+			</div>
+
+      <ion-item>
+        <ion-label floating>What is your country?</ion-label>
+				<ion-input type="text" formControlName="country"></ion-input>
+			</ion-item>
+
+			<div ngxErrors="country" #emailErrors="ngxErrors">
+				<div [ngxError]="['country', 'required']" [when]="['touched']">This field is required</div>
+			</div>
+
+      <ion-row style="height: 40px"></ion-row>
+
+			<!-- <ion-item [ngClass]="{ invalid: passwordErrors.hasError('*', ['touched']) }">
+				<ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+			</ion-item>
+
+			<div ngxErrors="password" #passwordErrors="ngxErrors">
+				<div [ngxError]="['minlength', 'required']" [when]="['touched']">It should be at least 6 characters</div>
+			</div> -->
+		</ion-list>
+
+		<div padding-horizontal>
+			<div class="form-error">{{signupError}}</div>
+
+			<button ion-button full color="teal" type="submit" [disabled]="!form.valid">Next</button>
+		</div>
+	</form>
+</ion-content>

@@ -1,0 +1,49 @@
+<ion-content>
+	<img alt="logo" height="50" src="../assets/img/khs.png" class="img-logo">
+	<form (ngSubmit)="trainingdetails()" [formGroup]="form">
+		<ion-list inset>
+
+	<ion-item>
+    <ion-label>Monday</ion-label>
+    <ion-checkbox></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Tuesday</ion-label>
+    <ion-checkbox></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Wednesday</ion-label>
+    <ion-checkbox></ion-checkbox>
+  </ion-item>
+
+	<ion-item>
+    <ion-label>Thursday</ion-label>
+    <ion-checkbox></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Friday</ion-label>
+    <ion-checkbox></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Saturday</ion-label>
+    <ion-checkbox></ion-checkbox>
+  </ion-item>
+
+	<ion-item>
+    <ion-label>Sunday</ion-label>
+    <ion-checkbox></ion-checkbox>
+  </ion-item>
+
+		</ion-list>
+
+		<div padding-horizontal>
+			<div class="form-error">{{signupError}}</div>
+
+			<button ion-button full color="teal" type="submit" [disabled]="!form.valid">Next</button>
+		</div>
+	</form>
+</ion-content>

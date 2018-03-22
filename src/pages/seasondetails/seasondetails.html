@@ -1,0 +1,33 @@
+<ion-content>
+	<img alt="logo" height="50" src="../assets/img/khs.png" class="img-logo">
+	<img alt="logo" height="280" src="../assets/img/BubbleAccount.png" class="img-bubble">
+	<form (ngSubmit)="schedule()" [formGroup]="form">
+		<ion-list inset>
+
+			<ion-item>
+			  <ion-label>Age Group</ion-label>
+			  <ion-select>
+			    <ion-option value="A">5-8</ion-option>
+			    <ion-option value="B">9-12</ion-option>
+					<ion-option value="C">13-17</ion-option>
+			  </ion-select>
+			</ion-item>
+
+      <ion-item>
+        <ion-label>Season Start</ion-label>
+        <ion-datetime displayFormat="DD MMM, YYYY"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Season End</ion-label>
+        <ion-datetime displayFormat="DD MMM, YYYY"></ion-datetime>
+      </ion-item>
+		</ion-list>
+
+		<div padding-horizontal>
+			<div class="form-error">{{signupError}}</div>
+
+			<button ion-button full color="teal" type="submit" [disabled]="!form.valid">Next</button>
+		</div>
+	</form>
+</ion-content>
